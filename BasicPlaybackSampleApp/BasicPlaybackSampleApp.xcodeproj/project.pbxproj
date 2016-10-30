@@ -39,6 +39,14 @@
 		0BCC6E261D2F2B1A0040B0B2 /* AVKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BCC6E251D2F2B1A0040B0B2 /* AVKit.framework */; };
 		0BF2362D1A40DB2800C4CE9A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0B19FEF21A3AB57E003E57DF /* Main.storyboard */; };
 		0BF4FD1B1A68814D0050A602 /* BasicSimplePlayerViewController.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0B19FEDC1A3AB4B4003E57DF /* BasicSimplePlayerViewController.h */; };
+		844692661DC5D3BE00439396 /* CachedURLResponse.h in Headers */ = {isa = PBXBuildFile; fileRef = 844692651DC5D3BE00439396 /* CachedURLResponse.h */; };
+		844692691DC5D41200439396 /* CachedURLResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 844692681DC5D41200439396 /* CachedURLResponse.m */; };
+		8446926C1DC5D45A00439396 /* MyURLProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = 8446926B1DC5D45A00439396 /* MyURLProtocol.h */; };
+		8446926E1DC5D46000439396 /* MyURLProtocol.m in Sources */ = {isa = PBXBuildFile; fileRef = 8446926D1DC5D46000439396 /* MyURLProtocol.m */; };
+		844692721DC5D6D900439396 /* BasicPlaybackSampleApp-Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = 844692711DC5D6D900439396 /* BasicPlaybackSampleApp-Prefix.pch */; };
+		844692781DC5DD6400439396 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 844692771DC5DD6400439396 /* CoreData.framework */; };
+		8446927A1DC5DEF400439396 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 844692791DC5DEF400439396 /* Foundation.framework */; };
+		8446927D1DC5E08700439396 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8446927B1DC5E08700439396 /* Model.xcdatamodeld */; };
 		9782DAF91BFBE5720094A660 /* QRScannerViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 9782DAF71BFBE5720094A660 /* QRScannerViewController.h */; };
 		9782DAFA1BFBE5720094A660 /* QRScannerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9782DAF81BFBE5720094A660 /* QRScannerViewController.m */; };
 		97E5874C1D4ADF9800202E09 /* JavaScriptCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97E5874B1D4ADF9800202E09 /* JavaScriptCore.framework */; };
@@ -89,6 +97,14 @@
 		0BC948141A81B627004CB997 /* SampleAppPlayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SampleAppPlayerViewController.h; sourceTree = "<group>"; };
 		0BC948151A81B627004CB997 /* SampleAppPlayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SampleAppPlayerViewController.m; sourceTree = "<group>"; };
 		0BCC6E251D2F2B1A0040B0B2 /* AVKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVKit.framework; path = System/Library/Frameworks/AVKit.framework; sourceTree = SDKROOT; };
+		844692651DC5D3BE00439396 /* CachedURLResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CachedURLResponse.h; path = ../VendorLibraries/CachedURLResponse.h; sourceTree = "<group>"; };
+		844692681DC5D41200439396 /* CachedURLResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CachedURLResponse.m; sourceTree = "<group>"; };
+		8446926B1DC5D45A00439396 /* MyURLProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyURLProtocol.h; sourceTree = "<group>"; };
+		8446926D1DC5D46000439396 /* MyURLProtocol.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyURLProtocol.m; sourceTree = "<group>"; };
+		844692711DC5D6D900439396 /* BasicPlaybackSampleApp-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "BasicPlaybackSampleApp-Prefix.pch"; sourceTree = "<group>"; };
+		844692771DC5DD6400439396 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		844692791DC5DEF400439396 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		8446927C1DC5E08700439396 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 		9782DAF71BFBE5720094A660 /* QRScannerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QRScannerViewController.h; sourceTree = "<group>"; };
 		9782DAF81BFBE5720094A660 /* QRScannerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QRScannerViewController.m; sourceTree = "<group>"; };
 		97E5874B1D4ADF9800202E09 /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
@@ -99,6 +115,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8446927A1DC5DEF400439396 /* Foundation.framework in Frameworks */,
+				844692781DC5DD6400439396 /* CoreData.framework in Frameworks */,
 				97E5874C1D4ADF9800202E09 /* JavaScriptCore.framework in Frameworks */,
 				0BCC6E261D2F2B1A0040B0B2 /* AVKit.framework in Frameworks */,
 				0B9457D41AC32C64000DD545 /* OoyalaSDK.framework in Frameworks */,
@@ -142,8 +160,11 @@
 		0B140F551A2E4709001324EE /* BasicPlaybackSampleApp */ = {
 			isa = PBXGroup;
 			children = (
+				8446926A1DC5D42400439396 /* MyURLProtocol */,
+				844692671DC5D3FE00439396 /* Model */,
 				0B140F5A1A2E4709001324EE /* AppDelegate.h */,
 				0B140F5B1A2E4709001324EE /* AppDelegate.m */,
+				8446927B1DC5E08700439396 /* Model.xcdatamodeld */,
 				0B19FEE51A3AB4E6003E57DF /* Base.lproj */,
 				0B19FEE01A3AB4BC003E57DF /* Lists */,
 				0B19FEDB1A3AB4B4003E57DF /* Players */,
@@ -157,6 +178,7 @@
 		0B140F561A2E4709001324EE /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				844692711DC5D6D900439396 /* BasicPlaybackSampleApp-Prefix.pch */,
 				0B140F571A2E4709001324EE /* Info.plist */,
 				0B140F581A2E4709001324EE /* main.m */,
 			);
@@ -166,6 +188,8 @@
 		0B140FAB1A2E6550001324EE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				844692791DC5DEF400439396 /* Foundation.framework */,
+				844692771DC5DD6400439396 /* CoreData.framework */,
 				97E5874B1D4ADF9800202E09 /* JavaScriptCore.framework */,
 				0BCC6E251D2F2B1A0040B0B2 /* AVKit.framework */,
 				0B9458AA1AC3353E000DD545 /* libxml2.dylib */,
@@ -239,6 +263,24 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		844692671DC5D3FE00439396 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				844692681DC5D41200439396 /* CachedURLResponse.m */,
+				844692651DC5D3BE00439396 /* CachedURLResponse.h */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		8446926A1DC5D42400439396 /* MyURLProtocol */ = {
+			isa = PBXGroup;
+			children = (
+				8446926D1DC5D46000439396 /* MyURLProtocol.m */,
+				8446926B1DC5D45A00439396 /* MyURLProtocol.h */,
+			);
+			name = MyURLProtocol;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -249,8 +291,11 @@
 				9782DAF91BFBE5720094A660 /* QRScannerViewController.h in Headers */,
 				0BC948161A81B627004CB997 /* PlayerSelectionOption.h in Headers */,
 				0B19FEE31A3AB4BC003E57DF /* BasicPlaybackListViewController.h in Headers */,
+				8446926C1DC5D45A00439396 /* MyURLProtocol.h in Headers */,
 				0BC948181A81B627004CB997 /* SampleAppPlayerViewController.h in Headers */,
+				844692721DC5D6D900439396 /* BasicPlaybackSampleApp-Prefix.pch in Headers */,
 				0B19FEDE1A3AB4B4003E57DF /* BasicSimplePlayerViewController.h in Headers */,
+				844692661DC5D3BE00439396 /* CachedURLResponse.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -361,12 +406,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				844692691DC5D41200439396 /* CachedURLResponse.m in Sources */,
 				0B140F5C1A2E4709001324EE /* AppDelegate.m in Sources */,
+				8446926E1DC5D46000439396 /* MyURLProtocol.m in Sources */,
 				9782DAFA1BFBE5720094A660 /* QRScannerViewController.m in Sources */,
 				0BC948191A81B627004CB997 /* SampleAppPlayerViewController.m in Sources */,
 				0B140F591A2E4709001324EE /* main.m in Sources */,
 				0BC948171A81B627004CB997 /* PlayerSelectionOption.m in Sources */,
 				0B19FEDF1A3AB4B4003E57DF /* BasicSimplePlayerViewController.m in Sources */,
+				8446927D1DC5E08700439396 /* Model.xcdatamodeld in Sources */,
 				0B19FEE41A3AB4BC003E57DF /* BasicPlaybackListViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -428,6 +476,7 @@
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/BasicPlaybackSampleApp/BasicPlaybackSampleApp-Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
@@ -493,7 +542,9 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/VendorLibraries",
+					"$(PROJECT_DIR)",
 				);
+				GCC_PREFIX_HEADER = "$(SRCROOT)/BasicPlaybackSampleApp/BasicPlaybackSampleApp-Prefix.pch";
 				INFOPLIST_FILE = "$(SRCROOT)/BasicPlaybackSampleApp/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -501,6 +552,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/VendorLibraries",
 				);
+				New_Setting = "";
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_LDFLAGS = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ooyala.$(PRODUCT_NAME:rfc1034identifier)";
@@ -519,6 +571,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/VendorLibraries",
+					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = "$(SRCROOT)/BasicPlaybackSampleApp/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
@@ -527,6 +580,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/VendorLibraries",
 				);
+				New_Setting = "";
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_LDFLAGS = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ooyala.$(PRODUCT_NAME:rfc1034identifier)";
@@ -607,6 +661,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		8446927B1DC5E08700439396 /* Model.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				8446927C1DC5E08700439396 /* Model.xcdatamodel */,
+			);
+			currentVersion = 8446927C1DC5E08700439396 /* Model.xcdatamodel */;
+			path = Model.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 0B140F4B1A2E4709001324EE /* Project object */;
 }
