@@ -22,7 +22,6 @@ static NSString * const MyURLProtocolHandledKey = @"MyURLProtocolHandledKey";
 @property (nonatomic, strong) NSMutableData *mutableData;
 @property (nonatomic, strong) NSURLResponse *response;
 @property (strong) CachedURLResponse *cachedResponse;
-@property (nonatomic, strong) NSURLRequest *savedRequest;
 @end
 
 @implementation MyURLProtocol
@@ -42,14 +41,13 @@ static NSString * const MyURLProtocolHandledKey = @"MyURLProtocolHandledKey";
 }
 
 - (void) startLoading {
-    //[self deleteAll];
+    [self deleteAll];
     self.cachedResponse = [self cachedResponseForCurrentRequest];
     if (self.cachedResponse  ) {
         
         NSData *data = self.cachedResponse.data;
         
-        //TODO: somehow recreate this self.response.URL from coredata and not save in NSDictionary
-        self.response = [[NSURLResponse alloc] initWithURL:self.response.URL
+        self.response = [[NSURLResponse alloc] initWithURL:[[NSURL alloc] initWithString:self.cachedResponse.url]
                                                       MIMEType:self.cachedResponse.mimeType
                                          expectedContentLength:data.length
                                               textEncodingName:self.cachedResponse.encoding];
@@ -113,8 +111,6 @@ static NSString * const MyURLProtocolHandledKey = @"MyURLProtocolHandledKey";
                                               inManagedObjectContext:context];
     [fetchRequest setEntity:entity];
     
-    self.savedRequest = self.request;
-    
     NSPredicate *predicate = [NSPredicate predicateWithFormat:@"url == %@", self.request.URL.absoluteString];
     [fetchRequest setPredicate:predicate];
     [fetchRequest setFetchLimit:1];
@@ -122,8 +118,6 @@ static NSString * const MyURLProtocolHandledKey = @"MyURLProtocolHandledKey";
     NSError *error;
     NSArray *result = [context executeFetchRequest:fetchRequest error:&error];
     
-    self.response = [delegate.urlCache objectForKey:self.request.URL.absoluteString];
-
     if (result && result.count > 0 && self.response != nil) {
         return result[0];
     }
@@ -164,14 +158,12 @@ static NSString * const MyURLProtocolHandledKey = @"MyURLProtocolHandledKey";
     self.cachedResponse.timestamp = [NSDate date];
     self.cachedResponse.mimeType = self.response.MIMEType;
     self.cachedResponse.encoding = self.response.textEncodingName;
-    self.cachedResponse.responseURL = self.response.URL.absoluteString;
     
     NSError *error;
     [context save:&error];
     if (error) {
         NSLog(@"Could not cache the response.");
     }
-    [delegate.urlCache setObject:self.response forKey:self.request.URL.absoluteString];
     
     
 }

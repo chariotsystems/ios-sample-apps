@@ -17,7 +17,6 @@
 @property (nonatomic, retain) NSString * mimeType;
 @property (nonatomic, retain) NSString * encoding;
 @property (nonatomic, retain) NSData * data;
-@property (nonatomic, retain) NSString* responseURL;
 
 
 @end

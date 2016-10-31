@@ -16,6 +16,6 @@
 @dynamic data;
 @dynamic mimeType;
 @dynamic encoding;
-@dynamic responseURL;
+
 
 @end
