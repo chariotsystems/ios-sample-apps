@@ -1,5 +1,5 @@
 /**
- * CachedURLResponse.m
+ * PrepositionProxy.h
  *
  * User: alex eadie
  * Date: 1/11/2016
@@ -8,16 +8,9 @@
  * Copying or reproduction without prior written approval is prohibited.
  **/
 
-#import "CachedURLResponse.h"
 
+#import <Foundation/Foundation.h>
 
-@implementation CachedURLResponse
-
-@dynamic timestamp;
-@dynamic url;
-@dynamic data;
-@dynamic mimeType;
-@dynamic encoding;
-
+@interface PrepositionProxy : NSURLProtocol
 
 @end

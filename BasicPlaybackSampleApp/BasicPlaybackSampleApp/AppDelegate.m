@@ -5,8 +5,18 @@
 //  Copyright (c) 2015 Ooyala, Inc. All rights reserved.
 //
 
+/**
+ * includes changes by:
+ * User: alex eadie
+ * Date: 1/11/2016
+ * Copyright (c) 2016, Telstra.
+ * This is proprietary information of the Telstra Corporation Limited.
+ * Copying or reproduction without prior written approval is prohibited.
+ **/
 #import "AppDelegate.h"
-#import "MyURLProtocol.h"
+#import "PrepositionProxy.h"
+#import "AFNetworkActivityIndicatorManager.h"
+
 
 @interface AppDelegate () <UINavigationControllerDelegate>
 
@@ -21,9 +31,13 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-  // Override point for customization after application launch.
-  [NSURLProtocol registerClass:MyURLProtocol.class];
+  ///START//// Preposition Proxy code ///
+  [NSURLProtocol registerClass:PrepositionProxy.class];
     _urlCache = [[NSMutableDictionary alloc] init];
+  // Show spinner when downloading from network.
+  [AFNetworkActivityIndicatorManager sharedManager].enabled = YES;
+  ///END//// Preposition Proxy code ///
+    
   return YES;
 }
 
@@ -47,9 +61,12 @@
 
 - (void)applicationWillTerminate:(UIApplication *)application {
   // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+    ///START//// Preposition Proxy code ///
     [self saveContext];
+     ///END//// Preposition Proxy code ///
 }
 
+ ///START//// Preposition Proxy code ///
 - (void)saveContext
 {
     NSError *error = nil;
@@ -108,7 +125,7 @@
     _persistentStoreCoordinator = [[NSPersistentStoreCoordinator alloc] initWithManagedObjectModel:[self managedObjectModel]];
     if (![_persistentStoreCoordinator addPersistentStoreWithType:NSSQLiteStoreType configuration:nil URL:storeURL options:nil error:&error]) {
         /*
-         Replace this implementation with code to handle the error appropriately.
+         TODO: Replace this implementation with code to handle the error appropriately.
          
          abort() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
          
@@ -144,5 +161,5 @@
 {
     return [[[NSFileManager defaultManager] URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask] lastObject];
 }
-
+///END//// Preposition Proxy code ///
 @end

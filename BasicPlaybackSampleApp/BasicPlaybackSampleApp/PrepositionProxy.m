@@ -1,33 +1,40 @@
-//
-//  MyURLProtocol.m
-//  NSURLProtocolExample
-//
-//  Created by Rocir Marcos Leite Santiago on 11/29/13.
-//  Copyright (c) 2013 Rocir Santiago. All rights reserved.
-//
+/**
+ * User: alex eadie
+ * Date: 1/11/2016
+ * Copyright (c) 2016, Telstra.
+ * This is proprietary information of the Telstra Corporation Limited.
+ * Copying or reproduction without prior written approval is prohibited.
+ *
+ * With acknowledgement to 
+ *     https://www.raywenderlich.com/59982/nsurlprotocol-tutorial
+ *
+ **/
 
-#import "MyURLProtocol.h"
-
-// AppDelegate
+#import "PrepositionProxy.h"
 #import "AppDelegate.h"
-
-// Model
 #import "CachedURLResponse.h"
 
 static NSString * const MyURLProtocolHandledKey = @"MyURLProtocolHandledKey";
 
-@interface MyURLProtocol () <NSURLConnectionDelegate>
+@interface PrepositionProxy () <NSURLConnectionDelegate>
 
 @property (nonatomic, strong) NSURLConnection *connection;
 @property (nonatomic, strong) NSMutableData *mutableData;
 @property (nonatomic, strong) NSURLResponse *response;
-@property (strong) CachedURLResponse *cachedResponse;
+@property (nonatomic, strong) CachedURLResponse *cachedResponse;
 @end
 
-@implementation MyURLProtocol
+@implementation PrepositionProxy
 @synthesize cachedResponse;
-
+//TODO: Top Priority: learn from peter jaber how to deploy to my device.
+//TODO: is this useful?
+//https://github.com/twitter/CocoaSPDY/blob/master/SPDY/SPDYProtocol.m
 + (BOOL)canInitWithRequest:(NSURLRequest *)request {
+    
+    NSString *scheme = request.URL.scheme.lowercaseString;
+    if (![scheme isEqualToString:@"http"] && ![scheme isEqualToString:@"https"]) {
+        return NO;
+    }
     
     if ([NSURLProtocol propertyForKey:MyURLProtocolHandledKey inRequest:request]) {
         return NO;
@@ -41,19 +48,19 @@ static NSString * const MyURLProtocolHandledKey = @"MyURLProtocolHandledKey";
 }
 
 - (void) startLoading {
-    [self deleteAll];
     self.cachedResponse = [self cachedResponseForCurrentRequest];
     if (self.cachedResponse  ) {
         
-        NSData *data = self.cachedResponse.data;
-        
-        self.response = [[NSURLResponse alloc] initWithURL:[[NSURL alloc] initWithString:self.cachedResponse.url]
-                                                      MIMEType:self.cachedResponse.mimeType
-                                         expectedContentLength:data.length
-                                              textEncodingName:self.cachedResponse.encoding];
-        
+//  This recreation of the response from core data does not work - the app crashes sometimes.
+//  So this cannot be recreating the same object that the client expects.
+//  My guess this is because its actually an NSHTTPURLResponse that we need with full bells and whistles.
+//       self.response = [[NSURLResponse alloc] initWithURL:[[NSURL alloc] initWithString:self.response.URL.absoluteString]
+//                                                      MIMEType:self.cachedResponse.mimeType
+//                                         expectedContentLength:self.cachedResponse.data.length
+//                                              textEncodingName:self.cachedResponse.encoding];
+//        
             [self.client URLProtocol:self didReceiveResponse:self.response cacheStoragePolicy:NSURLCacheStorageNotAllowed];
-            [self.client URLProtocol:self didLoadData:data];
+            [self.client URLProtocol:self didLoadData:self.cachedResponse.data];
             [self.client URLProtocolDidFinishLoading:self];
         
     } else {
@@ -65,7 +72,6 @@ static NSString * const MyURLProtocolHandledKey = @"MyURLProtocolHandledKey";
     }
     
 }
-
 
 
 - (void) stopLoading {
@@ -103,7 +109,14 @@ static NSString * const MyURLProtocolHandledKey = @"MyURLProtocolHandledKey";
 
 - (CachedURLResponse *) cachedResponseForCurrentRequest {
     
+    
     AppDelegate *delegate = [[UIApplication sharedApplication] delegate];
+    if(delegate.lastPurgeDate == nil ||
+        [[self yesterday] compare: delegate.lastPurgeDate] == NSOrderedDescending)
+        // if start is later in time than end
+    {
+        [self deleteOutOfDate];
+    }
     NSManagedObjectContext *context = delegate.managedObjectContext;
     
     NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
@@ -118,8 +131,10 @@ static NSString * const MyURLProtocolHandledKey = @"MyURLProtocolHandledKey";
     NSError *error;
     NSArray *result = [context executeFetchRequest:fetchRequest error:&error];
     
-    if (result && result.count > 0 && self.response != nil) {
-        return result[0];
+    self.response = [delegate.urlCache objectForKey:self.request.URL.absoluteString];
+    if (result && result.count > 0 && self.response) {
+        CachedURLResponse * cachedURLResponse = result[0];
+        return cachedURLResponse;
     }
     
     return nil;
@@ -140,16 +155,56 @@ static NSString * const MyURLProtocolHandledKey = @"MyURLProtocolHandledKey";
     for (NSManagedObject *car in cars) {
         [context deleteObject:car];
     }
+    
     NSError *saveError = nil;
     [context save:&saveError];
 }
+
+- (void) deleteOutOfDate {
+    AppDelegate *delegate = [[UIApplication sharedApplication] delegate];
+    NSManagedObjectContext *context = delegate.managedObjectContext;
+    
+    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
+    NSEntityDescription *entity = [NSEntityDescription entityForName:@"CachedURLResponse"
+                                              inManagedObjectContext:context];
+    [fetchRequest setEntity:entity];
+    [fetchRequest setIncludesPropertyValues:NO]; //only fetch the managedObjectID
+
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"timestamp < %@", [self yesterday]];
+    [fetchRequest setPredicate:predicate];
+    [fetchRequest setFetchLimit:20];
+    
+    NSError *error;
+    NSArray *result = [context executeFetchRequest:fetchRequest error:&error];
+    if ([result count] == 0){
+        delegate.lastPurgeDate = [NSDate date];
+    }
+    for (NSManagedObject *car in result) {
+        [context deleteObject:car];
+    }
+    NSError *saveError = nil;
+    [context save:&saveError];
+}
+
+- (NSDate*) yesterday {
+    NSDate* date = [NSDate date];
+    
+    NSDateComponents* comps = [[NSDateComponents alloc]init];
+    //comps.day = -1;
+    comps.minute = -2;//TODO: what should this be? 6 hours?
+    
+    NSCalendar* calendar = [NSCalendar currentCalendar];
+    
+    NSDate* yesterday = [calendar dateByAddingComponents:comps toDate:date options:0];
+    return yesterday;
+}
+
 
 - (void) saveCachedResponse {
     
     AppDelegate *delegate = [[UIApplication sharedApplication] delegate];
     NSManagedObjectContext *context = delegate.managedObjectContext;
     
-    // TODO: see if this needs to remain on self
     self.cachedResponse = [NSEntityDescription insertNewObjectForEntityForName:@"CachedURLResponse"
                                                                      inManagedObjectContext:context];
 
@@ -164,7 +219,7 @@ static NSString * const MyURLProtocolHandledKey = @"MyURLProtocolHandledKey";
     if (error) {
         NSLog(@"Could not cache the response.");
     }
-    
+    [delegate.urlCache setObject:self.response forKey:self.request.URL.absoluteString];
     
 }
 
