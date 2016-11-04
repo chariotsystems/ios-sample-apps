@@ -16,7 +16,9 @@
 #import "AppDelegate.h"
 #import "PrepositionProxy.h"
 #import "AFNetworkActivityIndicatorManager.h"
-
+#import <Foundation/Foundation.h>
+#import <CoreData/CoreData.h>
+#import "ManifestClient.h"
 
 @interface AppDelegate () <UINavigationControllerDelegate>
 
@@ -37,6 +39,7 @@
   // Show spinner when downloading from network.
   [AFNetworkActivityIndicatorManager sharedManager].enabled = YES;
   ///END//// Preposition Proxy code ///
+  [[[ManifestClient alloc] init] getManifest];
     
   return YES;
 }

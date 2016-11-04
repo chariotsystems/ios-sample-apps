@@ -8,22 +8,19 @@
 
 #import <Foundation/Foundation.h>
 #import "CommandClient.h"
-#import "NSDictionary+weather.h"
-#import "NSDictionary+weather_package.h"
+//#import "NSDictionary+command.h"
 #import "UIImageView+AFNetworking.h"
 #import "AFHTTPRequestOperation.h"
+#import "NSData+Base64.h"
+#import "NetworkUtils.h"
 
 
-static NSString * const BaseURLString = @"http://www.raywenderlich.com/demos/weather_sample/";
+static NSString * const BaseURLString = @"http://localhost:5000";
 
 
-// https://www.raywenderlich.com/59255/afnetworking-2-0-tutorial
 @interface CommandClient ()
-@property(nonatomic, strong) NSMutableDictionary *currentDictionary;   // current section being parsed
-@property(nonatomic, strong) NSMutableDictionary *xmlWeather;          // completed parsed xml response
-@property(nonatomic, strong) NSString *elementName;
-@property(nonatomic, strong) NSMutableString *outstring;
-@property(strong) NSDictionary *weather;
+
+@property(strong) NSDictionary *commandResponse;
 
 @end
 
@@ -31,46 +28,25 @@ static NSString * const BaseURLString = @"http://www.raywenderlich.com/demos/wea
 
 - (void) getCommands
 {
-    NSString *string = [NSString stringWithFormat:@"%@weather.php?format=json", BaseURLString];
-    NSURL *url = [NSURL URLWithString:string];
-    NSURLRequest *request = [NSURLRequest requestWithURL:url];
+    NSString* userId = @"userId";
+    NSString* appId = @"appId";
+    NSString* urlString = [NSString stringWithFormat:@"%@/services/command/v1/apps/%@/users/%@/commands", BaseURLString, appId, userId];
     
-    
-    AFHTTPRequestOperation *operation = [[AFHTTPRequestOperation alloc] initWithRequest:request];
-    operation.responseSerializer = [AFJSONResponseSerializer serializer];
+    AFHTTPRequestOperation *operation = [NetworkUtils getOperation:urlString];
     
     [operation setCompletionBlockWithSuccess:^(AFHTTPRequestOperation *operation, id responseObject) {
         
       
-        self.weather = (NSDictionary *)responseObject;
+        self.commandResponse = (NSDictionary *)responseObject;
 
         
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-            //Error handling goes here.
+        self.commandResponse =  nil;    //Error handling goes here.
     }];
     
  
     [operation start];
 }
 
-- (void) loadBinaryData
-{
-    NSString *string = [NSString stringWithFormat:@"%@weather.php?format=json", BaseURLString];
-    NSURL *url = [NSURL URLWithString:string];
-    NSURLRequest *request = [NSURLRequest requestWithURL:url];
-    
-    
-    AFHTTPRequestOperation *operation = [[AFHTTPRequestOperation alloc] initWithRequest:request];
-    
-    [operation setCompletionBlockWithSuccess:^(AFHTTPRequestOperation *operation, id responseObject) {
-        
-        
-        
-    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-        //Error handling goes here.
-    }];
-    
-    
-    [operation start];
-}
+
 @end

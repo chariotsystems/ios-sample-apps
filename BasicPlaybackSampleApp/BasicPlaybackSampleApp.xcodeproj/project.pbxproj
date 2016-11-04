@@ -74,10 +74,9 @@
 		8428C20D1DC8AC7B00756B41 /* AFURLResponseSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 8428C1FA1DC8AC7B00756B41 /* AFURLResponseSerialization.m */; };
 		8428C20E1DC8AC7B00756B41 /* AFURLSessionManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 8428C1FB1DC8AC7B00756B41 /* AFURLSessionManager.h */; };
 		8428C20F1DC8AC7B00756B41 /* AFURLSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8428C1FC1DC8AC7B00756B41 /* AFURLSessionManager.m */; };
-		8428C2141DC8AD1200756B41 /* NSDictionary+weather_package.h in Headers */ = {isa = PBXBuildFile; fileRef = 8428C2101DC8AD1200756B41 /* NSDictionary+weather_package.h */; };
-		8428C2151DC8AD1200756B41 /* NSDictionary+weather_package.m in Sources */ = {isa = PBXBuildFile; fileRef = 8428C2111DC8AD1200756B41 /* NSDictionary+weather_package.m */; };
-		8428C2161DC8AD1200756B41 /* NSDictionary+weather.h in Headers */ = {isa = PBXBuildFile; fileRef = 8428C2121DC8AD1200756B41 /* NSDictionary+weather.h */; };
-		8428C2171DC8AD1200756B41 /* NSDictionary+weather.m in Sources */ = {isa = PBXBuildFile; fileRef = 8428C2131DC8AD1200756B41 /* NSDictionary+weather.m */; };
+		8428C2161DC8AD1200756B41 /* NSDictionary+manifestDigest.h in Headers */ = {isa = PBXBuildFile; fileRef = 8428C2121DC8AD1200756B41 /* NSDictionary+manifestDigest.h */; };
+		8428C2171DC8AD1200756B41 /* NSDictionary+manifestDigest.m in Sources */ = {isa = PBXBuildFile; fileRef = 8428C2131DC8AD1200756B41 /* NSDictionary+manifestDigest.m */; };
+		843B6BEC1DCC51E00032D95F /* NetworkUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 843B6BEB1DCC51E00032D95F /* NetworkUtils.m */; };
 		844692661DC5D3BE00439396 /* CachedURLResponse.h in Headers */ = {isa = PBXBuildFile; fileRef = 844692651DC5D3BE00439396 /* CachedURLResponse.h */; };
 		844692691DC5D41200439396 /* CachedURLResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 844692681DC5D41200439396 /* CachedURLResponse.m */; };
 		8446926C1DC5D45A00439396 /* PrepositionProxy.h in Headers */ = {isa = PBXBuildFile; fileRef = 8446926B1DC5D45A00439396 /* PrepositionProxy.h */; };
@@ -85,6 +84,10 @@
 		844692721DC5D6D900439396 /* BasicPlaybackSampleApp-Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = 844692711DC5D6D900439396 /* BasicPlaybackSampleApp-Prefix.pch */; };
 		844692781DC5DD6400439396 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 844692771DC5DD6400439396 /* CoreData.framework */; };
 		8446927A1DC5DEF400439396 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 844692791DC5DEF400439396 /* Foundation.framework */; };
+		84B3CEF21DCC4299000CE7F0 /* NSData+Base64.h in Headers */ = {isa = PBXBuildFile; fileRef = 84B3CEF01DCC4299000CE7F0 /* NSData+Base64.h */; };
+		84B3CEF31DCC4299000CE7F0 /* NSData+Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = 84B3CEF11DCC4299000CE7F0 /* NSData+Base64.m */; };
+		84B3CEF71DCC466B000CE7F0 /* ManifestClient.h in Headers */ = {isa = PBXBuildFile; fileRef = 84B3CEF51DCC466B000CE7F0 /* ManifestClient.h */; };
+		84B3CEF81DCC466B000CE7F0 /* ManifestClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 84B3CEF61DCC466B000CE7F0 /* ManifestClient.m */; };
 		84C1F3E11DC93CCC0026AA11 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 84C1F3DF1DC93CCC0026AA11 /* Model.xcdatamodeld */; };
 		9782DAF91BFBE5720094A660 /* QRScannerViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 9782DAF71BFBE5720094A660 /* QRScannerViewController.h */; };
 		9782DAFA1BFBE5720094A660 /* QRScannerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9782DAF81BFBE5720094A660 /* QRScannerViewController.m */; };
@@ -172,10 +175,10 @@
 		8428C1FA1DC8AC7B00756B41 /* AFURLResponseSerialization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLResponseSerialization.m; sourceTree = "<group>"; };
 		8428C1FB1DC8AC7B00756B41 /* AFURLSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFURLSessionManager.h; sourceTree = "<group>"; };
 		8428C1FC1DC8AC7B00756B41 /* AFURLSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLSessionManager.m; sourceTree = "<group>"; };
-		8428C2101DC8AD1200756B41 /* NSDictionary+weather_package.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSDictionary+weather_package.h"; path = "../../../Downloads/Weather_Final/Weather/NSDictionary+weather_package.h"; sourceTree = "<group>"; };
-		8428C2111DC8AD1200756B41 /* NSDictionary+weather_package.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSDictionary+weather_package.m"; path = "../../../Downloads/Weather_Final/Weather/NSDictionary+weather_package.m"; sourceTree = "<group>"; };
-		8428C2121DC8AD1200756B41 /* NSDictionary+weather.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSDictionary+weather.h"; path = "../../../Downloads/Weather_Final/Weather/NSDictionary+weather.h"; sourceTree = "<group>"; };
-		8428C2131DC8AD1200756B41 /* NSDictionary+weather.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSDictionary+weather.m"; path = "../../../Downloads/Weather_Final/Weather/NSDictionary+weather.m"; sourceTree = "<group>"; };
+		8428C2121DC8AD1200756B41 /* NSDictionary+manifestDigest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSDictionary+manifestDigest.h"; path = "../../../Downloads/Weather_Final/Weather/NSDictionary+manifestDigest.h"; sourceTree = "<group>"; };
+		8428C2131DC8AD1200756B41 /* NSDictionary+manifestDigest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSDictionary+manifestDigest.m"; path = "../../../Downloads/Weather_Final/Weather/NSDictionary+manifestDigest.m"; sourceTree = "<group>"; };
+		843B6BEB1DCC51E00032D95F /* NetworkUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetworkUtils.m; sourceTree = "<group>"; };
+		843B6BED1DCC520B0032D95F /* NetworkUtils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NetworkUtils.h; sourceTree = "<group>"; };
 		844692651DC5D3BE00439396 /* CachedURLResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CachedURLResponse.h; path = ../VendorLibraries/CachedURLResponse.h; sourceTree = "<group>"; };
 		844692681DC5D41200439396 /* CachedURLResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CachedURLResponse.m; sourceTree = "<group>"; };
 		8446926B1DC5D45A00439396 /* PrepositionProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrepositionProxy.h; sourceTree = "<group>"; };
@@ -183,6 +186,10 @@
 		844692711DC5D6D900439396 /* BasicPlaybackSampleApp-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "BasicPlaybackSampleApp-Prefix.pch"; sourceTree = "<group>"; };
 		844692771DC5DD6400439396 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		844692791DC5DEF400439396 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		84B3CEF01DCC4299000CE7F0 /* NSData+Base64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSData+Base64.h"; path = "../../../Downloads/NSData_Base64/NSData+Base64.h"; sourceTree = "<group>"; };
+		84B3CEF11DCC4299000CE7F0 /* NSData+Base64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSData+Base64.m"; path = "../../../Downloads/NSData_Base64/NSData+Base64.m"; sourceTree = "<group>"; };
+		84B3CEF51DCC466B000CE7F0 /* ManifestClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ManifestClient.h; sourceTree = "<group>"; };
+		84B3CEF61DCC466B000CE7F0 /* ManifestClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ManifestClient.m; sourceTree = "<group>"; };
 		84C1F3E01DC93CCC0026AA11 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 		9782DAF71BFBE5720094A660 /* QRScannerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QRScannerViewController.h; sourceTree = "<group>"; };
 		9782DAF81BFBE5720094A660 /* QRScannerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QRScannerViewController.m; sourceTree = "<group>"; };
@@ -338,7 +345,9 @@
 		8428C1C51DC8A9C100756B41 /* MicroServiceClient */ = {
 			isa = PBXGroup;
 			children = (
+				84B3CEF91DCC467A000CE7F0 /* Utils */,
 				8428C2191DC8AD4900756B41 /* Command */,
+				84B3CEF41DCC4430000CE7F0 /* Manifest */,
 			);
 			name = MicroServiceClient;
 			sourceTree = "<group>";
@@ -405,10 +414,6 @@
 		8428C2191DC8AD4900756B41 /* Command */ = {
 			isa = PBXGroup;
 			children = (
-				8428C2101DC8AD1200756B41 /* NSDictionary+weather_package.h */,
-				8428C2111DC8AD1200756B41 /* NSDictionary+weather_package.m */,
-				8428C2121DC8AD1200756B41 /* NSDictionary+weather.h */,
-				8428C2131DC8AD1200756B41 /* NSDictionary+weather.m */,
 				8428C1C61DC8AA7B00756B41 /* CommandClient.m */,
 				8428C1C81DC8AA9700756B41 /* CommandClient.h */,
 			);
@@ -433,6 +438,28 @@
 				8446926B1DC5D45A00439396 /* PrepositionProxy.h */,
 			);
 			name = Proxy;
+			sourceTree = "<group>";
+		};
+		84B3CEF41DCC4430000CE7F0 /* Manifest */ = {
+			isa = PBXGroup;
+			children = (
+				8428C2121DC8AD1200756B41 /* NSDictionary+manifestDigest.h */,
+				8428C2131DC8AD1200756B41 /* NSDictionary+manifestDigest.m */,
+				84B3CEF51DCC466B000CE7F0 /* ManifestClient.h */,
+				84B3CEF61DCC466B000CE7F0 /* ManifestClient.m */,
+			);
+			name = Manifest;
+			sourceTree = "<group>";
+		};
+		84B3CEF91DCC467A000CE7F0 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				84B3CEF11DCC4299000CE7F0 /* NSData+Base64.m */,
+				84B3CEF01DCC4299000CE7F0 /* NSData+Base64.h */,
+				843B6BEB1DCC51E00032D95F /* NetworkUtils.m */,
+				843B6BED1DCC520B0032D95F /* NetworkUtils.h */,
+			);
+			name = Utils;
 			sourceTree = "<group>";
 		};
 		84C1F3DD1DC937570026AA11 /* Prepositioning */ = {
@@ -465,8 +492,10 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84B3CEF21DCC4299000CE7F0 /* NSData+Base64.h in Headers */,
 				8428C2041DC8AC7B00756B41 /* AFNetworkReachabilityManager.h in Headers */,
 				9782DAF91BFBE5720094A660 /* QRScannerViewController.h in Headers */,
+				84B3CEF71DCC466B000CE7F0 /* ManifestClient.h in Headers */,
 				8428C1DC1DC8AC6D00756B41 /* UIActivityIndicatorView+AFNetworking.h in Headers */,
 				8428C1E21DC8AC6D00756B41 /* UIImageView+AFNetworking.h in Headers */,
 				8428C20C1DC8AC7B00756B41 /* AFURLResponseSerialization.h in Headers */,
@@ -475,7 +504,7 @@
 				8428C1FD1DC8AC7B00756B41 /* AFHTTPRequestOperation.h in Headers */,
 				0B19FEE31A3AB4BC003E57DF /* BasicPlaybackListViewController.h in Headers */,
 				8446926C1DC5D45A00439396 /* PrepositionProxy.h in Headers */,
-				8428C2161DC8AD1200756B41 /* NSDictionary+weather.h in Headers */,
+				8428C2161DC8AD1200756B41 /* NSDictionary+manifestDigest.h in Headers */,
 				8428C1E01DC8AC6D00756B41 /* UIButton+AFNetworking.h in Headers */,
 				0BC948181A81B627004CB997 /* SampleAppPlayerViewController.h in Headers */,
 				8428C2061DC8AC7B00756B41 /* AFSecurityPolicy.h in Headers */,
@@ -488,7 +517,6 @@
 				8428C20A1DC8AC7B00756B41 /* AFURLRequestSerialization.h in Headers */,
 				8428C20E1DC8AC7B00756B41 /* AFURLSessionManager.h in Headers */,
 				8428C1DE1DC8AC6D00756B41 /* UIAlertView+AFNetworking.h in Headers */,
-				8428C2141DC8AD1200756B41 /* NSDictionary+weather_package.h in Headers */,
 				8428C1DA1DC8AC6D00756B41 /* AFNetworkActivityIndicatorManager.h in Headers */,
 				8428C2081DC8AC7B00756B41 /* AFURLConnectionOperation.h in Headers */,
 				8428C1E71DC8AC6D00756B41 /* UIWebView+AFNetworking.h in Headers */,
@@ -555,6 +583,7 @@
 				TargetAttributes = {
 					0B140F521A2E4709001324EE = {
 						CreatedOnToolsVersion = 6.1;
+						DevelopmentTeam = 3QVH9HK84Q;
 					};
 					0B19FEFD1A3B7532003E57DF = {
 						CreatedOnToolsVersion = 6.1;
@@ -610,15 +639,16 @@
 				8428C1FE1DC8AC7B00756B41 /* AFHTTPRequestOperation.m in Sources */,
 				8428C1E81DC8AC6D00756B41 /* UIWebView+AFNetworking.m in Sources */,
 				8428C1DF1DC8AC6D00756B41 /* UIAlertView+AFNetworking.m in Sources */,
+				843B6BEC1DCC51E00032D95F /* NetworkUtils.m in Sources */,
 				8446926E1DC5D46000439396 /* PrepositionProxy.m in Sources */,
 				8428C1C71DC8AA7B00756B41 /* CommandClient.m in Sources */,
-				8428C2171DC8AD1200756B41 /* NSDictionary+weather.m in Sources */,
+				8428C2171DC8AD1200756B41 /* NSDictionary+manifestDigest.m in Sources */,
 				9782DAFA1BFBE5720094A660 /* QRScannerViewController.m in Sources */,
+				84B3CEF81DCC466B000CE7F0 /* ManifestClient.m in Sources */,
 				0BC948191A81B627004CB997 /* SampleAppPlayerViewController.m in Sources */,
 				0B140F591A2E4709001324EE /* main.m in Sources */,
 				8428C1E61DC8AC6D00756B41 /* UIProgressView+AFNetworking.m in Sources */,
 				8428C2021DC8AC7B00756B41 /* AFHTTPSessionManager.m in Sources */,
-				8428C2151DC8AD1200756B41 /* NSDictionary+weather_package.m in Sources */,
 				0BC948171A81B627004CB997 /* PlayerSelectionOption.m in Sources */,
 				84C1F3E11DC93CCC0026AA11 /* Model.xcdatamodeld in Sources */,
 				8428C1DB1DC8AC6D00756B41 /* AFNetworkActivityIndicatorManager.m in Sources */,
@@ -631,6 +661,7 @@
 				8428C1E11DC8AC6D00756B41 /* UIButton+AFNetworking.m in Sources */,
 				0B19FEE41A3AB4BC003E57DF /* BasicPlaybackListViewController.m in Sources */,
 				8428C2051DC8AC7B00756B41 /* AFNetworkReachabilityManager.m in Sources */,
+				84B3CEF31DCC4299000CE7F0 /* NSData+Base64.m in Sources */,
 				8428C1DD1DC8AC6D00756B41 /* UIActivityIndicatorView+AFNetworking.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -754,6 +785,8 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				ENABLE_BITCODE = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -771,8 +804,9 @@
 				New_Setting = "";
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_LDFLAGS = "$(inherited)";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.ooyala.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.cloudaddins.DevBluetoothMYNY;
 				PRODUCT_NAME = BasicPlaybackSampleApp;
+				PROVISIONING_PROFILE = "";
 				USER_HEADER_SEARCH_PATHS = "";
 				VALID_ARCHS = "armv7 armv7s arm64";
 			};
@@ -783,6 +817,8 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				ENABLE_BITCODE = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -799,8 +835,9 @@
 				New_Setting = "";
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_LDFLAGS = "$(inherited)";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.ooyala.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.cloudaddins.DevBluetoothMYNY;
 				PRODUCT_NAME = BasicPlaybackSampleApp;
+				PROVISIONING_PROFILE = "";
 				USER_HEADER_SEARCH_PATHS = "";
 				VALID_ARCHS = "armv7 armv7s arm64";
 			};

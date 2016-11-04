@@ -6,12 +6,10 @@
 //  Copyright © 2016 Ooyala, Inc. All rights reserved.
 //
 
-#ifndef CommandClient_h
-#define CommandClient_h
 
 @interface CommandClient : NSObject
-
+- (void) getCommands;
 @end
 
 
-#endif /* CommandClient_h */
+
