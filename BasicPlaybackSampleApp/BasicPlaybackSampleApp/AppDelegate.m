@@ -18,7 +18,7 @@
 #import "AFNetworkActivityIndicatorManager.h"
 #import <Foundation/Foundation.h>
 #import <CoreData/CoreData.h>
-#import "ManifestClient.h"
+#import "BasicPlaybackSampleApp-Swift.h"
 
 @interface AppDelegate () <UINavigationControllerDelegate>
 
@@ -34,7 +34,8 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
   ///START//// Preposition Proxy code ///
-  [NSURLProtocol registerClass:PrepositionProxy.class];
+ // [NSURLProtocol registerClass:PrepositionProxy.class];
+    [NSURLProtocol registerClass:MyURLProtocol.class];
     _urlCache = [[NSMutableDictionary alloc] init];
   // Show spinner when downloading from network.
   [AFNetworkActivityIndicatorManager sharedManager].enabled = YES;

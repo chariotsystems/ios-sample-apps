@@ -12,7 +12,8 @@
 
 #import "PrepositionProxy.h"
 #import "AppDelegate.h"
-#import "CachedURLResponse.h"
+#import "CachedURLResponse+CoreDataClass.h"
+#import "CachedURLResponse+CoreDataProperties.h"
 
 static NSString * const MyURLProtocolHandledKey = @"MyURLProtocolHandledKey";
 
