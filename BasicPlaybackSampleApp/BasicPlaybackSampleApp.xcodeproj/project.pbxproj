@@ -80,10 +80,6 @@
 		844692781DC5DD6400439396 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 844692771DC5DD6400439396 /* CoreData.framework */; };
 		8446927A1DC5DEF400439396 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 844692791DC5DEF400439396 /* Foundation.framework */; };
 		84C1F3E11DC93CCC0026AA11 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 84C1F3DF1DC93CCC0026AA11 /* Model.xcdatamodeld */; };
-		84D935291DCDC19500290D9E /* ManifestClient.h in Headers */ = {isa = PBXBuildFile; fileRef = 84D935271DCDC19500290D9E /* ManifestClient.h */; };
-		84D9352A1DCDC19500290D9E /* ManifestClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 84D935281DCDC19500290D9E /* ManifestClient.m */; };
-		84D9352D1DCDEA1200290D9E /* NetworkUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = 84D9352B1DCDEA1200290D9E /* NetworkUtils.h */; };
-		84D9352E1DCDEA1200290D9E /* NetworkUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 84D9352C1DCDEA1200290D9E /* NetworkUtils.m */; };
 		9782DAF91BFBE5720094A660 /* QRScannerViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 9782DAF71BFBE5720094A660 /* QRScannerViewController.h */; };
 		9782DAFA1BFBE5720094A660 /* QRScannerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9782DAF81BFBE5720094A660 /* QRScannerViewController.m */; };
 		97E5874C1D4ADF9800202E09 /* JavaScriptCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97E5874B1D4ADF9800202E09 /* JavaScriptCore.framework */; };
@@ -176,10 +172,6 @@
 		844692771DC5DD6400439396 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		844692791DC5DEF400439396 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		84C1F3E01DC93CCC0026AA11 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
-		84D935271DCDC19500290D9E /* ManifestClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ManifestClient.h; sourceTree = "<group>"; };
-		84D935281DCDC19500290D9E /* ManifestClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ManifestClient.m; sourceTree = "<group>"; };
-		84D9352B1DCDEA1200290D9E /* NetworkUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetworkUtils.h; sourceTree = "<group>"; };
-		84D9352C1DCDEA1200290D9E /* NetworkUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetworkUtils.m; sourceTree = "<group>"; };
 		9782DAF71BFBE5720094A660 /* QRScannerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QRScannerViewController.h; sourceTree = "<group>"; };
 		9782DAF81BFBE5720094A660 /* QRScannerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QRScannerViewController.m; sourceTree = "<group>"; };
 		97E5874B1D4ADF9800202E09 /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
@@ -428,8 +420,6 @@
 		84B3CEF41DCC4430000CE7F0 /* Manifest */ = {
 			isa = PBXGroup;
 			children = (
-				84D935271DCDC19500290D9E /* ManifestClient.h */,
-				84D935281DCDC19500290D9E /* ManifestClient.m */,
 				843B6BF11DCC952A0032D95F /* ManifestClient.swift */,
 			);
 			name = Manifest;
@@ -438,8 +428,6 @@
 		84B3CEF91DCC467A000CE7F0 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
-				84D9352B1DCDEA1200290D9E /* NetworkUtils.h */,
-				84D9352C1DCDEA1200290D9E /* NetworkUtils.m */,
 				843B6BEF1DCC678C0032D95F /* NetworkUtils.swift */,
 			);
 			name = Utils;
@@ -476,7 +464,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				8428C2041DC8AC7B00756B41 /* AFNetworkReachabilityManager.h in Headers */,
-				84D935291DCDC19500290D9E /* ManifestClient.h in Headers */,
 				9782DAF91BFBE5720094A660 /* QRScannerViewController.h in Headers */,
 				8428C1DC1DC8AC6D00756B41 /* UIActivityIndicatorView+AFNetworking.h in Headers */,
 				8428C1E21DC8AC6D00756B41 /* UIImageView+AFNetworking.h in Headers */,
@@ -486,7 +473,6 @@
 				8428C1FD1DC8AC7B00756B41 /* AFHTTPRequestOperation.h in Headers */,
 				0B19FEE31A3AB4BC003E57DF /* BasicPlaybackListViewController.h in Headers */,
 				8428C1E01DC8AC6D00756B41 /* UIButton+AFNetworking.h in Headers */,
-				84D9352D1DCDEA1200290D9E /* NetworkUtils.h in Headers */,
 				0BC948181A81B627004CB997 /* SampleAppPlayerViewController.h in Headers */,
 				8428C2061DC8AC7B00756B41 /* AFSecurityPolicy.h in Headers */,
 				8428C1E41DC8AC6D00756B41 /* UIKit+AFNetworking.h in Headers */,
@@ -619,7 +605,6 @@
 				843B6BF41DCCA0ED0032D95F /* MyURLProtocol.swift in Sources */,
 				8428C1FE1DC8AC7B00756B41 /* AFHTTPRequestOperation.m in Sources */,
 				8428C1E81DC8AC6D00756B41 /* UIWebView+AFNetworking.m in Sources */,
-				84D9352E1DCDEA1200290D9E /* NetworkUtils.m in Sources */,
 				8428C1DF1DC8AC6D00756B41 /* UIAlertView+AFNetworking.m in Sources */,
 				9782DAFA1BFBE5720094A660 /* QRScannerViewController.m in Sources */,
 				0BC948191A81B627004CB997 /* SampleAppPlayerViewController.m in Sources */,
@@ -627,7 +612,6 @@
 				8428C1E61DC8AC6D00756B41 /* UIProgressView+AFNetworking.m in Sources */,
 				8428C2021DC8AC7B00756B41 /* AFHTTPSessionManager.m in Sources */,
 				0BC948171A81B627004CB997 /* PlayerSelectionOption.m in Sources */,
-				84D9352A1DCDC19500290D9E /* ManifestClient.m in Sources */,
 				84C1F3E11DC93CCC0026AA11 /* Model.xcdatamodeld in Sources */,
 				8428C1DB1DC8AC6D00756B41 /* AFNetworkActivityIndicatorManager.m in Sources */,
 				8428C2091DC8AC7B00756B41 /* AFURLConnectionOperation.m in Sources */,
