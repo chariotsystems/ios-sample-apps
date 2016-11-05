@@ -14,11 +14,12 @@
  * Copying or reproduction without prior written approval is prohibited.
  **/
 #import "AppDelegate.h"
-#import "PrepositionProxy.h"
+//#import "PrepositionProxy.h"
 #import "AFNetworkActivityIndicatorManager.h"
 #import <Foundation/Foundation.h>
 #import <CoreData/CoreData.h>
 #import "BasicPlaybackSampleApp-Swift.h"
+#import "ManifestClient.h"
 
 @interface AppDelegate () <UINavigationControllerDelegate>
 
@@ -41,6 +42,7 @@
   [AFNetworkActivityIndicatorManager sharedManager].enabled = YES;
   ///END//// Preposition Proxy code ///
   [[[ManifestClient alloc] init] getManifest];
+    [[[ManifestClientSwift alloc] init] getManifest];
     
   return YES;
 }

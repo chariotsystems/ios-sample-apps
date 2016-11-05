@@ -107,7 +107,7 @@ class MyURLProtocol: URLProtocol {
         
     }
     
-    func cachedResponseForCurrentRequest() -> CachedURLResponse? {
+    func cachedResponseForCurrentRequest() -> NSManagedObject? {
         
         let delegate = UIApplication.shared.delegate as! AppDelegate
         let context = delegate.managedObjectContext!
@@ -121,7 +121,7 @@ class MyURLProtocol: URLProtocol {
         
         do {
             let result = try context.fetch(fetchRequest)
-                as! [CachedURLResponse]
+                as! [NSManagedObject]
             
             
             
