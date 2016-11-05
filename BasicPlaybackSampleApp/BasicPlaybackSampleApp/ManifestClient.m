@@ -11,10 +11,10 @@
 
 #import <Foundation/Foundation.h>
 #import "ManifestClient.h"
-#import "NSDictionary+manifestDigest.h"
+//#import "NSDictionary+manifestDigest.h"
 #import "UIImageView+AFNetworking.h"
 #import "AFHTTPRequestOperation.h"
-#import "NSData+Base64.h"
+//#import "NSData+Base64.h"
 #import "NetworkUtils.h"
 
 
@@ -40,13 +40,13 @@ static NSString * const BaseURLString = @"http://localhost:5000";
         self.manifestDigests = (NSArray *)responseObject;
         if ([self.manifestDigests count] > 0) {
             self.manifestDigest = [self.manifestDigests firstObject];
-            NSDictionary* urls = [self.manifestDigest urls];
+    /*        NSDictionary* urls = [self.manifestDigest urls];
             NSDictionary* summary = [self.manifestDigest summary];
             if ([urls count] > 0) {
                 for (NSString* singleUrl in urls.allKeys) {
               //      NSURL *url = [NSURL URLWithString:singleUrl];
                 }
-            }
+            }*/
         }
         
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {

@@ -12,7 +12,7 @@
 #import "NetworkUtils.h"
 #import "UIImageView+AFNetworking.h"
 #import "AFHTTPRequestOperation.h"
-#import "NSData+Base64.h"
+//#import "NSData+Base64.h"
 
 static NSString * const BaseURLString = @"http://localhost:5000";
 
@@ -30,12 +30,12 @@ static NSString * const BaseURLString = @"http://localhost:5000";
     NSURLCredential *credential = [NSURLCredential credentialWithUser:@"mobile" password:@"oooSecret" persistence:NSURLCredentialPersistenceNone];
     NSString *authStr = [NSString stringWithFormat:@"%@:%@", @"mobile", @"oooSecret"];
     NSData *authData = [authStr dataUsingEncoding:NSUTF8StringEncoding];
-    NSString *authValue = [NSString stringWithFormat:@"Basic %@", [authData base64EncodedString]];
+    NSString *authValue = @"Basic bW9iaWxlOm9vb1NlY3JldA==";//[NSString stringWithFormat:@"Basic %@", [authData base64EncodedString]];
     [request setValue:authValue forHTTPHeaderField:@"Authorization"];
     AFHTTPRequestOperation *operation = [[AFHTTPRequestOperation alloc] initWithRequest:request];
     // Comment out the next line if json deserialize is not required
     operation.responseSerializer = [AFJSONResponseSerializer serializer];
-    [operation setCredential:credential];
+  //  [operation setCredential:credential];
     return operation;
 }
 @end
