@@ -1,9 +1,16 @@
+//
+//  MyURLProtocol.swift
+//  BasicPlaybackSampleApp
+//
+//  Created by admin on 4/11/16.
+//  Copyright © 2016 Telstra. All rights reserved.
+//
 import UIKit
 import CoreData
 
 var requestCount = 0
 
-class MyURLProtocol: URLProtocol {
+class PrepositionProxy: URLProtocol {
     
     var connection: NSURLConnection!
     var mutableData: NSMutableData!
@@ -28,24 +35,19 @@ class MyURLProtocol: URLProtocol {
     }
     
     override func startLoading() {
-        // 1
         let possibleCachedResponse = self.cachedResponseForCurrentRequest()
         if let cachedResponse = possibleCachedResponse {
             
-            // 2
             let data = cachedResponse.value(forKey: "data") as! Data!
             let mimeType = cachedResponse.value(forKey: "mimeType") as! String!
             let encoding = cachedResponse.value(forKey: "encoding") as! String!
             
-            // 3
             let response = URLResponse(url: self.request.url!, mimeType: mimeType, expectedContentLength: data!.count, textEncodingName: encoding)
             
-            // 4
             self.client!.urlProtocol(self, didReceive: response, cacheStoragePolicy: .notAllowed)
             self.client!.urlProtocol(self, didLoad: data!)
             self.client!.urlProtocolDidFinishLoading(self)
         } else {
-            // 5
             println("Serving response from NSURLConnection")
             
             let newRequest = NSMutableURLRequest(url: self.request.url!);
@@ -85,11 +87,9 @@ class MyURLProtocol: URLProtocol {
     func saveCachedResponse () {
         println("Saving cached response")
         
-        // 1
         let delegate = UIApplication.shared.delegate as! AppDelegate
         let context = delegate.managedObjectContext!
         
-        // 2
         let cachedResponse = NSEntityDescription.insertNewObject(forEntityName: "CachedURLResponse", into: context) as NSManagedObject
         
         cachedResponse.setValue(self.mutableData, forKey: "data")
@@ -122,12 +122,9 @@ class MyURLProtocol: URLProtocol {
         do {
             let result = try context.fetch(fetchRequest)
                 as! [NSManagedObject]
-            
-            
-            
-                if !result.isEmpty {
-                    return result[0]
-                }
+            if !result.isEmpty {
+                return result[0]
+            }
             
         } catch {
            
@@ -137,6 +134,6 @@ class MyURLProtocol: URLProtocol {
         return nil
     }
     func println(_ arg:String){
-        
+        print(arg)
     }
 }

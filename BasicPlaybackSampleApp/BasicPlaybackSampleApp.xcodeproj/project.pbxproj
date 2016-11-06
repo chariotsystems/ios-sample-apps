@@ -75,11 +75,12 @@
 		8428C20F1DC8AC7B00756B41 /* AFURLSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8428C1FC1DC8AC7B00756B41 /* AFURLSessionManager.m */; };
 		843B6BF01DCC678C0032D95F /* NetworkUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843B6BEF1DCC678C0032D95F /* NetworkUtils.swift */; };
 		843B6BF21DCC952A0032D95F /* ManifestClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843B6BF11DCC952A0032D95F /* ManifestClient.swift */; };
-		843B6BF41DCCA0ED0032D95F /* MyURLProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843B6BF31DCCA0ED0032D95F /* MyURLProtocol.swift */; };
+		843B6BF41DCCA0ED0032D95F /* PrepositionProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843B6BF31DCCA0ED0032D95F /* PrepositionProxy.swift */; };
 		844692721DC5D6D900439396 /* BasicPlaybackSampleApp-Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = 844692711DC5D6D900439396 /* BasicPlaybackSampleApp-Prefix.pch */; };
 		844692781DC5DD6400439396 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 844692771DC5DD6400439396 /* CoreData.framework */; };
 		8446927A1DC5DEF400439396 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 844692791DC5DEF400439396 /* Foundation.framework */; };
 		84C1F3E11DC93CCC0026AA11 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 84C1F3DF1DC93CCC0026AA11 /* Model.xcdatamodeld */; };
+		84D935711DCFAE3800290D9E /* ManifestDigest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D935701DCFAE3800290D9E /* ManifestDigest.swift */; };
 		9782DAF91BFBE5720094A660 /* QRScannerViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 9782DAF71BFBE5720094A660 /* QRScannerViewController.h */; };
 		9782DAFA1BFBE5720094A660 /* QRScannerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9782DAF81BFBE5720094A660 /* QRScannerViewController.m */; };
 		97E5874C1D4ADF9800202E09 /* JavaScriptCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97E5874B1D4ADF9800202E09 /* JavaScriptCore.framework */; };
@@ -167,11 +168,12 @@
 		843B6BEE1DCC678C0032D95F /* BasicPlaybackSampleApp-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BasicPlaybackSampleApp-Bridging-Header.h"; sourceTree = "<group>"; };
 		843B6BEF1DCC678C0032D95F /* NetworkUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkUtils.swift; sourceTree = "<group>"; };
 		843B6BF11DCC952A0032D95F /* ManifestClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ManifestClient.swift; sourceTree = "<group>"; };
-		843B6BF31DCCA0ED0032D95F /* MyURLProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyURLProtocol.swift; sourceTree = "<group>"; };
+		843B6BF31DCCA0ED0032D95F /* PrepositionProxy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrepositionProxy.swift; sourceTree = "<group>"; };
 		844692711DC5D6D900439396 /* BasicPlaybackSampleApp-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "BasicPlaybackSampleApp-Prefix.pch"; sourceTree = "<group>"; };
 		844692771DC5DD6400439396 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		844692791DC5DEF400439396 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		84C1F3E01DC93CCC0026AA11 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
+		84D935701DCFAE3800290D9E /* ManifestDigest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ManifestDigest.swift; sourceTree = "<group>"; };
 		9782DAF71BFBE5720094A660 /* QRScannerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QRScannerViewController.h; sourceTree = "<group>"; };
 		9782DAF81BFBE5720094A660 /* QRScannerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QRScannerViewController.m; sourceTree = "<group>"; };
 		97E5874B1D4ADF9800202E09 /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
@@ -411,7 +413,7 @@
 		8446926A1DC5D42400439396 /* Proxy */ = {
 			isa = PBXGroup;
 			children = (
-				843B6BF31DCCA0ED0032D95F /* MyURLProtocol.swift */,
+				843B6BF31DCCA0ED0032D95F /* PrepositionProxy.swift */,
 				844692671DC5D3FE00439396 /* Model */,
 			);
 			name = Proxy;
@@ -421,6 +423,7 @@
 			isa = PBXGroup;
 			children = (
 				843B6BF11DCC952A0032D95F /* ManifestClient.swift */,
+				84D935701DCFAE3800290D9E /* ManifestDigest.swift */,
 			);
 			name = Manifest;
 			sourceTree = "<group>";
@@ -602,7 +605,7 @@
 				0B140F5C1A2E4709001324EE /* AppDelegate.m in Sources */,
 				8428C2071DC8AC7B00756B41 /* AFSecurityPolicy.m in Sources */,
 				8428C2001DC8AC7B00756B41 /* AFHTTPRequestOperationManager.m in Sources */,
-				843B6BF41DCCA0ED0032D95F /* MyURLProtocol.swift in Sources */,
+				843B6BF41DCCA0ED0032D95F /* PrepositionProxy.swift in Sources */,
 				8428C1FE1DC8AC7B00756B41 /* AFHTTPRequestOperation.m in Sources */,
 				8428C1E81DC8AC6D00756B41 /* UIWebView+AFNetworking.m in Sources */,
 				8428C1DF1DC8AC6D00756B41 /* UIAlertView+AFNetworking.m in Sources */,
@@ -613,6 +616,7 @@
 				8428C2021DC8AC7B00756B41 /* AFHTTPSessionManager.m in Sources */,
 				0BC948171A81B627004CB997 /* PlayerSelectionOption.m in Sources */,
 				84C1F3E11DC93CCC0026AA11 /* Model.xcdatamodeld in Sources */,
+				84D935711DCFAE3800290D9E /* ManifestDigest.swift in Sources */,
 				8428C1DB1DC8AC6D00756B41 /* AFNetworkActivityIndicatorManager.m in Sources */,
 				8428C2091DC8AC7B00756B41 /* AFURLConnectionOperation.m in Sources */,
 				8428C20B1DC8AC7B00756B41 /* AFURLRequestSerialization.m in Sources */,

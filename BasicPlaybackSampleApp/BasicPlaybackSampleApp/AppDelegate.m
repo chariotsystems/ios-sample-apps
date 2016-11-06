@@ -14,12 +14,10 @@
  * Copying or reproduction without prior written approval is prohibited.
  **/
 #import "AppDelegate.h"
-//#import "PrepositionProxy.h"
 #import "AFNetworkActivityIndicatorManager.h"
 #import <Foundation/Foundation.h>
 #import <CoreData/CoreData.h>
 #import "BasicPlaybackSampleApp-Swift.h"
-//#import "ManifestClient.h"
 
 @interface AppDelegate () <UINavigationControllerDelegate>
 
@@ -34,14 +32,15 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
   ///START//// Preposition Proxy code ///
- // [NSURLProtocol registerClass:PrepositionProxy.class];
-    [NSURLProtocol registerClass:MyURLProtocol.class];
-  
+    [NSURLProtocol registerClass:PrepositionProxy.class];
+    
   // Show spinner when downloading from network.
   [AFNetworkActivityIndicatorManager sharedManager].enabled = YES;
   ///END//// Preposition Proxy code ///
-  [[[ManifestClient alloc] init] getManifest];
-  //  [[[ManifestClientSwift alloc] init] getManifest];
+    
+    //Test code:
+  [[[ManifestClient alloc] init] getManifestHarness];
+  
     
   return YES;
 }
