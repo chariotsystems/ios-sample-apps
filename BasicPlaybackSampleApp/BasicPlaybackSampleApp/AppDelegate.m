@@ -30,14 +30,13 @@
 @synthesize managedObjectContext = _managedObjectContext;
 @synthesize managedObjectModel = _managedObjectModel;
 @synthesize persistentStoreCoordinator = _persistentStoreCoordinator;
-@synthesize urlCache = _urlCache;
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
   ///START//// Preposition Proxy code ///
  // [NSURLProtocol registerClass:PrepositionProxy.class];
     [NSURLProtocol registerClass:MyURLProtocol.class];
-    _urlCache = [[NSMutableDictionary alloc] init];
+  
   // Show spinner when downloading from network.
   [AFNetworkActivityIndicatorManager sharedManager].enabled = YES;
   ///END//// Preposition Proxy code ///

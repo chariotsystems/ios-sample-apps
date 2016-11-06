@@ -4,4 +4,5 @@
 
 #import <AFNetworking.h>
 #import "AppDelegate.h"
+#import "AFNetworkActivityIndicatorManager.h"
 //#import "CachedURLResponse.h"

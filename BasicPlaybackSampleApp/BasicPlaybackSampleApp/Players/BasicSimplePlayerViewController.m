@@ -10,6 +10,8 @@
 #import "BasicSimplePlayerViewController.h"
 #import <OoyalaSDK/OoyalaSDK.h>
 #import "AppDelegate.h"
+#import "BasicPlaybackSampleApp-Swift.h"
+
 
 @interface BasicSimplePlayerViewController ()
 @property (strong, nonatomic) OOOoyalaPlayerViewController *ooyalaPlayerViewController;
@@ -77,10 +79,10 @@
     return;
   }
   
-  NSLog(@"Notification Received: %@. state: %@. playhead: %f count: %d",
+/*  NSLog(@"Notification Received: %@. state: %@. playhead: %f count: %d",
         [notification name],
         [OOOoyalaPlayer playerStateToString:[self.ooyalaPlayerViewController.player state]],
         [self.ooyalaPlayerViewController.player playheadTime], appDel.count);
-  appDel.count++;
+  appDel.count++;*/
 }
 @end
