@@ -24,18 +24,17 @@ import Foundation
                            //TODO: unmarshall me to get error reason
                         }// can get status 401 here if password is invalid.
                         failureResponse("errorPayload")
-                    } else if let manifestDigests = responseObject as? NSArray {
-                        if (manifestDigests.count > 0) {
-                           let manifestDigest = manifestDigests.firstObject as! NSDictionary;
-                           let urls = manifestDigest["urls"] as! NSDictionary;
-                           // let summary = manifestDigest["summary"];
-                            if (urls.count > 0) {
-                                //for (singleUrl in urls.allKeys) {
-                                //      NSURL *url = [NSURL URLWithString:singleUrl];
-                                //}
+                    } else if let manifestDigestsJson = responseObject as? NSArray {
+                        do{
+                            var manifestDigests = [ManifestDigest]()
+                            for individual in manifestDigestsJson {
+                                let manifestDigest = try ManifestDigest(object: individual as! JSONObject)
+                                    manifestDigests.append( manifestDigest)
                             }
-                        }
-                        successResponse([ManifestDigest]())
+                            successResponse(manifestDigests)
+                        } catch {
+                                 //TODO:
+                        }                        
                     }
                 },
                 failure: { (operation, error) in

@@ -81,6 +81,16 @@
 		8446927A1DC5DEF400439396 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 844692791DC5DEF400439396 /* Foundation.framework */; };
 		84C1F3E11DC93CCC0026AA11 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 84C1F3DF1DC93CCC0026AA11 /* Model.xcdatamodeld */; };
 		84D935711DCFAE3800290D9E /* ManifestDigest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D935701DCFAE3800290D9E /* ManifestDigest.swift */; };
+		84D9357A1DCFF86700290D9E /* JSONCodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D935731DCFF86600290D9E /* JSONCodable.swift */; };
+		84D9357B1DCFF86700290D9E /* JSONDecodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D935741DCFF86600290D9E /* JSONDecodable.swift */; };
+		84D9357C1DCFF86700290D9E /* JSONEncodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D935751DCFF86600290D9E /* JSONEncodable.swift */; };
+		84D9357D1DCFF86700290D9E /* JSONEncodable+Mirror.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D935761DCFF86600290D9E /* JSONEncodable+Mirror.swift */; };
+		84D9357E1DCFF86700290D9E /* JSONHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D935771DCFF86600290D9E /* JSONHelpers.swift */; };
+		84D9357F1DCFF86700290D9E /* JSONString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D935781DCFF86600290D9E /* JSONString.swift */; };
+		84D935801DCFF86700290D9E /* JSONTransformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D935791DCFF86700290D9E /* JSONTransformer.swift */; };
+		84D935821DD0098300290D9E /* Summary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D935811DD0098300290D9E /* Summary.swift */; };
+		84D935841DD009A100290D9E /* UrlData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D935831DD009A100290D9E /* UrlData.swift */; };
+		84D935861DD009BB00290D9E /* Segment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D935851DD009BB00290D9E /* Segment.swift */; };
 		9782DAF91BFBE5720094A660 /* QRScannerViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 9782DAF71BFBE5720094A660 /* QRScannerViewController.h */; };
 		9782DAFA1BFBE5720094A660 /* QRScannerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9782DAF81BFBE5720094A660 /* QRScannerViewController.m */; };
 		97E5874C1D4ADF9800202E09 /* JavaScriptCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97E5874B1D4ADF9800202E09 /* JavaScriptCore.framework */; };
@@ -174,6 +184,16 @@
 		844692791DC5DEF400439396 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		84C1F3E01DC93CCC0026AA11 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 		84D935701DCFAE3800290D9E /* ManifestDigest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ManifestDigest.swift; sourceTree = "<group>"; };
+		84D935731DCFF86600290D9E /* JSONCodable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = JSONCodable.swift; path = JSONCodable/JSONCodable.swift; sourceTree = "<group>"; };
+		84D935741DCFF86600290D9E /* JSONDecodable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = JSONDecodable.swift; path = JSONCodable/JSONDecodable.swift; sourceTree = "<group>"; };
+		84D935751DCFF86600290D9E /* JSONEncodable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = JSONEncodable.swift; path = JSONCodable/JSONEncodable.swift; sourceTree = "<group>"; };
+		84D935761DCFF86600290D9E /* JSONEncodable+Mirror.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "JSONEncodable+Mirror.swift"; path = "JSONCodable/JSONEncodable+Mirror.swift"; sourceTree = "<group>"; };
+		84D935771DCFF86600290D9E /* JSONHelpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = JSONHelpers.swift; path = JSONCodable/JSONHelpers.swift; sourceTree = "<group>"; };
+		84D935781DCFF86600290D9E /* JSONString.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = JSONString.swift; path = JSONCodable/JSONString.swift; sourceTree = "<group>"; };
+		84D935791DCFF86700290D9E /* JSONTransformer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = JSONTransformer.swift; path = JSONCodable/JSONTransformer.swift; sourceTree = "<group>"; };
+		84D935811DD0098300290D9E /* Summary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Summary.swift; sourceTree = "<group>"; };
+		84D935831DD009A100290D9E /* UrlData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UrlData.swift; sourceTree = "<group>"; };
+		84D935851DD009BB00290D9E /* Segment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Segment.swift; sourceTree = "<group>"; };
 		9782DAF71BFBE5720094A660 /* QRScannerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QRScannerViewController.h; sourceTree = "<group>"; };
 		9782DAF81BFBE5720094A660 /* QRScannerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QRScannerViewController.m; sourceTree = "<group>"; };
 		97E5874B1D4ADF9800202E09 /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
@@ -424,6 +444,9 @@
 			children = (
 				843B6BF11DCC952A0032D95F /* ManifestClient.swift */,
 				84D935701DCFAE3800290D9E /* ManifestDigest.swift */,
+				84D935811DD0098300290D9E /* Summary.swift */,
+				84D935831DD009A100290D9E /* UrlData.swift */,
+				84D935851DD009BB00290D9E /* Segment.swift */,
 			);
 			name = Manifest;
 			sourceTree = "<group>";
@@ -439,6 +462,7 @@
 		84C1F3DD1DC937570026AA11 /* Prepositioning */ = {
 			isa = PBXGroup;
 			children = (
+				84D935721DCFF83600290D9E /* JSONCodable */,
 				8428C1C91DC8AC5200756B41 /* AFNetworking */,
 				8446926A1DC5D42400439396 /* Proxy */,
 				8428C1C51DC8A9C100756B41 /* MicroServiceClient */,
@@ -457,6 +481,20 @@
 				0B19FEE01A3AB4BC003E57DF /* Lists */,
 			);
 			name = OoyalaPlayer;
+			sourceTree = "<group>";
+		};
+		84D935721DCFF83600290D9E /* JSONCodable */ = {
+			isa = PBXGroup;
+			children = (
+				84D935731DCFF86600290D9E /* JSONCodable.swift */,
+				84D935741DCFF86600290D9E /* JSONDecodable.swift */,
+				84D935751DCFF86600290D9E /* JSONEncodable.swift */,
+				84D935761DCFF86600290D9E /* JSONEncodable+Mirror.swift */,
+				84D935771DCFF86600290D9E /* JSONHelpers.swift */,
+				84D935781DCFF86600290D9E /* JSONString.swift */,
+				84D935791DCFF86700290D9E /* JSONTransformer.swift */,
+			);
+			name = JSONCodable;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -602,26 +640,36 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84D9357F1DCFF86700290D9E /* JSONString.swift in Sources */,
 				0B140F5C1A2E4709001324EE /* AppDelegate.m in Sources */,
+				84D935841DD009A100290D9E /* UrlData.swift in Sources */,
 				8428C2071DC8AC7B00756B41 /* AFSecurityPolicy.m in Sources */,
 				8428C2001DC8AC7B00756B41 /* AFHTTPRequestOperationManager.m in Sources */,
 				843B6BF41DCCA0ED0032D95F /* PrepositionProxy.swift in Sources */,
 				8428C1FE1DC8AC7B00756B41 /* AFHTTPRequestOperation.m in Sources */,
 				8428C1E81DC8AC6D00756B41 /* UIWebView+AFNetworking.m in Sources */,
 				8428C1DF1DC8AC6D00756B41 /* UIAlertView+AFNetworking.m in Sources */,
+				84D935801DCFF86700290D9E /* JSONTransformer.swift in Sources */,
 				9782DAFA1BFBE5720094A660 /* QRScannerViewController.m in Sources */,
+				84D935821DD0098300290D9E /* Summary.swift in Sources */,
 				0BC948191A81B627004CB997 /* SampleAppPlayerViewController.m in Sources */,
 				0B140F591A2E4709001324EE /* main.m in Sources */,
 				8428C1E61DC8AC6D00756B41 /* UIProgressView+AFNetworking.m in Sources */,
 				8428C2021DC8AC7B00756B41 /* AFHTTPSessionManager.m in Sources */,
 				0BC948171A81B627004CB997 /* PlayerSelectionOption.m in Sources */,
+				84D9357C1DCFF86700290D9E /* JSONEncodable.swift in Sources */,
 				84C1F3E11DC93CCC0026AA11 /* Model.xcdatamodeld in Sources */,
 				84D935711DCFAE3800290D9E /* ManifestDigest.swift in Sources */,
+				84D9357A1DCFF86700290D9E /* JSONCodable.swift in Sources */,
 				8428C1DB1DC8AC6D00756B41 /* AFNetworkActivityIndicatorManager.m in Sources */,
+				84D9357D1DCFF86700290D9E /* JSONEncodable+Mirror.swift in Sources */,
 				8428C2091DC8AC7B00756B41 /* AFURLConnectionOperation.m in Sources */,
 				8428C20B1DC8AC7B00756B41 /* AFURLRequestSerialization.m in Sources */,
 				8428C20F1DC8AC7B00756B41 /* AFURLSessionManager.m in Sources */,
+				84D9357E1DCFF86700290D9E /* JSONHelpers.swift in Sources */,
+				84D935861DD009BB00290D9E /* Segment.swift in Sources */,
 				8428C20D1DC8AC7B00756B41 /* AFURLResponseSerialization.m in Sources */,
+				84D9357B1DCFF86700290D9E /* JSONDecodable.swift in Sources */,
 				843B6BF21DCC952A0032D95F /* ManifestClient.swift in Sources */,
 				0B19FEDF1A3AB4B4003E57DF /* BasicSimplePlayerViewController.m in Sources */,
 				8428C1E31DC8AC6D00756B41 /* UIImageView+AFNetworking.m in Sources */,
