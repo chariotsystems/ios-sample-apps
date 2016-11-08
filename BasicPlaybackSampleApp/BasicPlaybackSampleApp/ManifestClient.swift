@@ -14,7 +14,7 @@ import Foundation
     func getManifest(manifestUrl:String, includeUrls:Bool, includeSegments:Bool,
                      successResponse:@escaping ([ManifestDigest])->Void, failureResponse:@escaping (String)->Void)
     {
-         let urlString = "\(BaseURLString)/services/command/v1/manifests?url=\(manifestUrl)&includeUrls=true"
+         let urlString = "\(BaseURLString)/services/command/v1/manifests?url=\(manifestUrl)&includeUrls=\(includeUrls)&includeSegments=\(includeSegments)"
         if let operation = NetworkUtils.getOperation(urlString) {
             
             operation.setCompletionBlockWithSuccess(

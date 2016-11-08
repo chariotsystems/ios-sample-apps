@@ -10,12 +10,19 @@ import Foundation
 
 struct Segment{
     
+  let segmentMs : Int?
+ 
+  let startMs : Int?
+  
+  let sources : [Source]?
+
 }
 
 extension Segment: JSONDecodable {
     init(object: JSONObject) throws {
         let decoder = JSONDecoder(object: object)
-        //        name = try decoder.decode("name")
-        //        address = try decoder.decode("address")
+        segmentMs = try decoder.decode("segmentMs")
+        startMs = try decoder.decode("startMs")
+        sources = try decoder.decode("sources")
     }
 }
